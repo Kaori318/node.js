@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+<body style="margin: 0 auto; width: 800px">
+ <h1>Практическое задание</h1>
+<p>1. Решите задачу по выводу данных в консоль.<br>
+ console.log('Record 1');<br>
+ 
+ setTimeout(() => {<br>
+  &ensp;console.log('Record 2');<br>
+  &ensp;Promise.resolve().then(() => {<br>
+   &ensp;  &ensp;setTimeout(() => {<br>
+    &ensp;  &ensp;сonsole.log('Record 3');<br>
+    &ensp;  &ensp;Promise.resolve().then(() => {<br>
+     &ensp;    &ensp;&ensp;console.log('Record 4');<br>
+     &ensp;    &ensp;&ensp;});<br>
+     &ensp;   &ensp;});<br>
+     &ensp;  });<br>
+ });<br>
+ 
+ console.log('Record 5');<br>
+ 
+ Promise.resolve().then(() => Promise.resolve().then(() => console.log('Record
+ 6')));</p>
+
+ <p>2.  Напишите программу, которая будет принимать на вход несколько аргументов: дату и время в
+  формате «час-день-месяц-год». Задача программы — создавать для каждого аргумента
+  таймер с обратным отсчётом: посекундный вывод в терминал состояния таймеров (сколько
+  осталось). По истечении какого-либо таймера, вместо сообщения о том, сколько осталось,
+  требуется показать сообщение о завершении его работы. Важно, чтобы работа программы
+  основывалась на событиях.</p>
+
+</body>
+</html>
